@@ -7,6 +7,7 @@ RUN apk update &&\
     rm -f /root/.bashrc &&\
     echo 'export PATH="$HOME/brew/bin:$PATH"' > /root/.bashrc &&\
     echo 'export MANPATH="$HOME/brew/share/man:$MANPATH"' >> /root/.bashrc &&\
-    echo 'export INFOPATH="$HOME/brew/share/info:$INFOPATH"' >> /root/.bashrc
+    echo 'export INFOPATH="$HOME/brew/share/info:$INFOPATH"' >> /root/.bashrc &&\
+    cp -r $HOME/brew/bin/ $HOME/brew/orig_bin/
 
 ENTRYPOINT ["/root/brew/bin/brew"]
