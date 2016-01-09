@@ -7,5 +7,5 @@ RUN apk update &&\
 
 USER nobody
 
-RUN git clone -b 612-permissions-of-shared-libraries https://github.com/thriqon/linuxbrew.git /brew &&\
+RUN git clone https://github.com/Homebrew/linuxbrew.git /brew &&\
     cp -r /brew/bin/ /brew/orig_bin/
